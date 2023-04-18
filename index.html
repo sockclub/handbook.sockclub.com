@@ -10,10 +10,11 @@
 
     <link rel="canonical" href="https://handbook.sockclub.com/">
 
-    
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -136,6 +137,11 @@
             </div>
           </div>
         </div>
+    <button id="toggleButton">Toggle Div</button>
+    <div id="hiddenDiv" style="display:none;">
+        
+
+        
         <div class="col">
           <div class="card shadow-sm">
             <img src="assets/manage.jpeg" height="225">
@@ -176,6 +182,9 @@
         </div>
       </div>
       </div>
+      
+      
+      </div>
     </div>
   </div>
 
@@ -191,7 +200,13 @@
 
 
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            $("#toggleButton").click(function() {
+                $("#hiddenDiv").toggle();
+            });
+        });
+    </script>
       
   </body>
 </html>
